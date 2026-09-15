@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Wisuda - ALPI YANDI IKSAN</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        body { font-family: 'Montserrat', sans-serif; }
+        .font-serif-title { font-family: 'Cinzel', serif; }
+        /* Latar belakang cerah, hangat, dan ceria */
+        .bg-bright-celebration {
+            background: linear-gradient(135deg, #fef8ec 0%, #fdedd0 100%);
+        }
+    </style>
+</head>
+<body class="bg-bright-celebration text-slate-800 min-h-screen w-screen flex items-center justify-center p-4 overflow-x-hidden relative">
+
+    <audio id="bg-music" loop src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
+    <button id="music-toggle" class="absolute top-4 right-4 z-50 bg-amber-500 text-white w-10 h-10 rounded-full flex items-center justify-center shadow-md hover:scale-110 transition duration-300">
+        <i id="music-icon" class="fas fa-music text-sm"></i>
+    </button>
+
+    <div class="absolute inset-4 border-2 border-amber-400/30 pointer-events-none rounded-xl z-0"></div>
+
+    <main class="w-full max-w-md bg-white/80 backdrop-blur-md border border-amber-200 rounded-2xl p-6 text-center shadow-xl z-10 space-y-4">
+        
+        <div class="text-amber-500 text-2xl animate-bounce">
+            🎉 ✨ 🎓
+        </div>
+
+        <!-- Wadah Foto dengan overflow-hidden agar gambar rapi di dalam lingkaran -->
+        <div class="w-48 h-48 md:w-46 md:h-46 mx-auto rounded-full border-4 border-amber-400 p-1 shadow-md bg-white overflow-hidden">
+            <img src="foto1.JPG" 
+                 alt="Foto Alpi Yandi Iksan" 
+                 class="w-full h-full object-cover rounded-full" 
+                 style="object-position: center 25%;">
+        </div>
+
+        <div>
+            <p class="text-amber-600 tracking-widest text-xs font-semibold uppercase mb-1">Graduation Invitation</p>
+            <h1 class="font-serif-title text-xl md:text-2xl font-bold text-slate-900 tracking-wide uppercase leading-tight">
+                ALPI YANDI IKSAN, S.Kom
+            </h1>
+            <p class="text-sm text-amber-700 font-medium tracking-wide mt-1">
+                Universitas Putra Indonesia "YPTK" Padang
+            </p>
+        </div>
+
+        <div class="bg-amber-50/60 rounded-xl p-4 border border-amber-200/60 space-y-3 text-left">
+            
+            <div class="flex items-start space-x-3">
+                <div class="text-amber-600 text-base mt-0.5 flex-shrink-0"><i class="fas fa-graduation-cap"></i></div>
+                <div class="flex-1 min-w-0 break-words">
+                    <h3 class="font-bold text-slate-900 text-sm">Prosesi Wisuda</h3>
+                    <p class="text-slate-600 font-medium text-xs">Rabu, 14 Oktober 2026 | 08.00 WIB</p>
+                    <p class="text-slate-500 text-xs mt-0.5 leading-relaxed">
+                        UPI Convention Center, Kampus UPI YPTK Padang
+                    </p>
+                </div>
+            </div>
+            
+            <div class="border-t border-amber-200"></div>
+
+            <div class="flex items-start space-x-3">
+                <div class="text-amber-600 text-base mt-0.5 flex-shrink-0"><i class="fas fa-users"></i></div>
+                <div class="flex-1 min-w-0 break-words">
+                    <h3 class="font-bold text-slate-900 text-sm">Acara Bersama Teman-teman</h3>
+                    <p class="text-slate-600 font-medium text-xs">Rabu, 14 Oktober 2026 | 15.00 WIB</p>
+                    <p class="text-slate-500 text-xs mt-0.5 leading-relaxed">
+                        Tempat Kumpul / Taman UPI YPTK Padang
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Kolom Hitung Mundur (Countdown) -->
+        <div class="grid grid-cols-4 gap-2 text-center max-w-xs mx-auto">
+            <div class="bg-white py-1.5 px-1 rounded-lg border border-amber-200 shadow-sm">
+                <span id="days" class="text-base font-bold text-amber-600 block">00</span>
+                <span class="text-[10px] text-slate-500 font-medium uppercase">Hari</span>
+            </div>
+            <div class="bg-white py-1.5 px-1 rounded-lg border border-amber-200 shadow-sm">
+                <span id="hours" class="text-base font-bold text-amber-600 block">00</span>
+                <span class="text-[10px] text-slate-500 font-medium uppercase">Jam</span>
+            </div>
+            <div class="bg-white py-1.5 px-1 rounded-lg border border-amber-200 shadow-sm">
+                <span id="minutes" class="text-base font-bold text-amber-600 block">00</span>
+                <span class="text-[10px] text-slate-500 font-medium uppercase">Menit</span>
+            </div>
+            <div class="bg-white py-1.5 px-1 rounded-lg border border-amber-200 shadow-sm">
+                <span id="seconds" class="text-base font-bold text-amber-600 block">00</span>
+                <span class="text-[10px] text-slate-500 font-medium uppercase">Detik</span>
+            </div>
+        </div>
+
+        <div>
+            <a href="https://maps.app.goo.gl/P3qFZuBkCS2k7XTW6" target="_blank" class="w-full bg-amber-500 hover:bg-amber-600 text-white font-bold py-2.5 px-6 rounded-xl transition duration-300 flex items-center justify-center space-x-2 shadow-md hover:shadow-lg text-sm">
+                <i class="fas fa-map-marked-alt"></i>
+                <span>Petunjuk Lokasi (Google Maps)</span>
+            </a>
+        </div>
+
+    </main>
+
+    <script>
+        // Target waktu hitung mundur: Rabu, 14 Oktober 2026 jam 15:00:00
+        const targetDate = new Date("October 14, 2026 15:00:00").getTime();
+
+        setInterval(function() {
+            const now = new Date().getTime();
+            const diff = targetDate - now;
+
+            const d = Math.max(0, Math.floor(diff / (1000 * 60 * 60 * 24)));
+            const h = Math.max(0, Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
+            const m = Math.max(0, Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60)));
+            const s = Math.max(0, Math.floor((diff % (1000 * 60)) / 1000));
+
+            document.getElementById("days").innerText = d < 10 ? "0" + d : d;
+            document.getElementById("hours").innerText = h < 10 ? "0" + h : h;
+            document.getElementById("minutes").innerText = m < 10 ? "0" + m : m;
+            document.getElementById("seconds").innerText = s < 10 ? "0" + s : s;
+        }, 1000);
+
+        // Kontrol Musik
+        const music = document.getElementById("bg-music");
+        const btn = document.getElementById("music-toggle");
+        const icon = document.getElementById("music-icon");
+        let playing = false;
+
+        btn.addEventListener("click", () => {
+            if (playing) {
+                music.pause();
+                icon.className = "fas fa-music";
+            } else {
+                music.play().catch(e => console.log("Audio di-block oleh kebijakan browser"));
+                icon.className = "fas fa-pause";
+            }
+            playing = !playing;
+        });
+    </script>
+</body>
+</html>
